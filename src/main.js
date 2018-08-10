@@ -5,6 +5,7 @@ import "mint-ui/lib/style.css";
 import router from "./router";
 import store from "./store";
 import { plusReady } from "@/utils/plusReady.js";
+import i18n from "@/locale";
 
 Vue.use(Mint);
 Vue.config.productionTip = false;
@@ -12,6 +13,7 @@ Vue.config.productionTip = false;
 new Vue({
   router,
   store,
+  i18n,
   render: h => h(App),
   created() {
     plusReady(this.plusReady);
