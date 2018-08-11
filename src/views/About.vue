@@ -5,7 +5,6 @@
 </template>
 
 <script>
-import i18n from "@/locale";
 export default {
   data() {
     return {
@@ -14,7 +13,7 @@ export default {
   },
   mounted() {
     this.$nextTick(function() {
-      i18n.locale = "zh"; // 切换成中文
+      this.$store.commit("setLocale", "zh");
       this.$toast({
         message: this.$t("system.networkError"),
         position: "bottom"
